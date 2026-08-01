@@ -1,5 +1,7 @@
 # Automated BI Report Generation from Tabular Data
 
+🔗 **Live Demo:** [Coming soon — deploy link yaha aayega]
+
 An end-to-end pipeline that takes raw sales data (CSV) and automatically generates a comprehensive business intelligence report in natural language, complete with charts and actionable recommendations — powered by generative AI.
 
 ## Overview
@@ -11,6 +13,8 @@ Manually writing business reports from spreadsheets is slow and repetitive. This
 - Automated statistical analysis of sales data (revenue, profit, margins, trends)
 - AI-generated natural language business report (Executive Summary, Regional Analysis, Category Insights, Recommendations)
 - Auto-generated visual charts (sales by region, profit by category, monthly trend, top products)
+- Interactive web app (Streamlit) — upload CSV, get instant report in browser
+- No-code interface for non-technical users
 - Single-command pipeline execution
 - Timestamped report versioning
 
@@ -20,6 +24,7 @@ Manually writing business reports from spreadsheets is slow and repetitive. This
 - Pandas, NumPy for data processing
 - Matplotlib, Seaborn for visualization
 - Groq API (Llama 3.3 70B) for natural language report generation
+- Streamlit for web app interface
 - python-dotenv for environment variable management
 
 ## Project Structure
@@ -30,13 +35,15 @@ bi-report-generator/
 │ ├── analyze.py
 │ ├── visualize.py
 │ └── generate_report.py
+├── notebooks/
+│ └── eda.ipynb
 ├── reports/
 │ ├── charts/
 │ └── bi_report_*.md
+├── app.py
 ├── main.py
 ├── requirements.txt
 └── README.md
-
 ## Setup
 
 1. Clone the repository
@@ -66,23 +73,7 @@ You can also run individual stages:
 python src/analyze.py
 python src/visualize.py
 python src/generate_report.py
-## Sample Output
+## Web App (Recommended)
 
-The generated report includes:
-- Executive Summary
-- Sales Performance breakdown
-- Regional Analysis
-- Category & Product Insights
-- Discounting Impact analysis
-- Actionable Recommendations
-
-## Dataset
-
-This project uses the [Sample Superstore dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) from Kaggle, containing order-level sales data across regions, categories, and customer segments.
-
-## Future Improvements
-
-- Web dashboard interface (Streamlit/Flask)
-- PDF export for generated reports
-- Support for multiple dataset schemas
-- Comparative reports across time periods
+For a no-code experience, run the Streamlit web app:
+streamlit run app.py
