@@ -1,7 +1,5 @@
 # Automated BI Report Generation from Tabular Data
 
-🔗 **Live Demo:** [Coming soon — deploy link yaha aayega]
-
 An end-to-end pipeline that takes raw sales data (CSV) and automatically generates a comprehensive business intelligence report in natural language, complete with charts and actionable recommendations — powered by generative AI.
 
 ## Overview
