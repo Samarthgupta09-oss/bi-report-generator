@@ -71,7 +71,3 @@ You can also run individual stages:
 python src/analyze.py
 python src/visualize.py
 python src/generate_report.py
-## Web App (Recommended)
-
-For a no-code experience, run the Streamlit web app:
-streamlit run app.py
